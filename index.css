@@ -2,15 +2,74 @@
 @import url('https://webfontworld.github.io/amore/AritaDotum.css'); /* font-family: 'AritaDotum' */
 
 *{
-    font-family: 'AritaDotum';
+    font-family: 'AritaDotum'
 }
-body,div,span,a,section,ul,ol,li{
+body,div,span,a,section,ul,ol,li,dl,dt,dd{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a{text-decoration: none;}
+ul,ol{list-style: none;}
+a{text-decoration: none; color: #585858; cursor: pointer;}
+a img{border: 0; vertical-align: top;}
+img{max-width: 100%; height: auto;}
 h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
+}
+body{
+    font-size: 1em;
+    line-height: 1.5;
+}
+/* header */
+.layout{
+    max-width: 1840px;
+    margin: 0 auto;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.logo{
+    padding: 13px 0 17px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+    .logo a{
+        display: block;
+        width: 190px;
+        margin: 0 auto;
+    }
+
+#menu{
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+}
+#menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 21px;
+}
+    #menu ul a{
+        margin: 0 25px;
+    }
+
+/* main */
+main{
+    margin-bottom: 2em;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.main-banner{
+    margin-bottom: 30px;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+}
+.main-banner img{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: center 15%;
 }
