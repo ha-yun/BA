@@ -62,14 +62,24 @@ main{
     margin: 0 auto;
 }
 .main-banner{
-    margin-bottom: 30px;
+    display: block;
+    position: relative;
+    margin-bottom: 30px !important;
     margin: 0 auto;
     max-width: 100%;
-    text-align: center;
+    text-align: center; 
+    overflow: hidden;
+}
+.main-slide{
+    display: flex;
+    width: 400vw;
+    height: 800px;
+    overflow: hidden;
 }
 .main-banner img{
+    display: inline-block;
     width: 100%;
     height: 800px;
     object-fit: cover;
-    object-position: center 15%;
+    object-position: center 20%;
 }
