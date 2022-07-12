@@ -3,6 +3,7 @@ $(function(){
     var currentX = 0;
     var main_slide;
     var main_width;
+    var main_size;
 
     Init();
     Event();
@@ -17,20 +18,24 @@ $(function(){
 
         currentIndex = index;
         currentX = main_width*currentIndex;
-        main_slide.css({'transform':'translateX('+ -currentX+'px)'})
+        main_slide.css({'transform':'translateX('+ -currentX+'px)'});
+        main_slide.fadeIn();
     }
     function MainBanner(){
         currentIndex++;
         if(currentIndex >= main_size){
             currentIndex = 0
+            main_slide.fadeOut(0)
+            main_slide.css({'transform':'translateX('+ -currentX+'px)'});
         }
         MoveBanner(currentIndex)
     }
 
     function MainBannerSlide(){
-        timer = setInterval(MainBanner, 3800)
+        timer = setInterval(MainBanner, 5000)
     }
     MainBannerSlide();
+
 
 
     function Event(){
