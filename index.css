@@ -20,8 +20,12 @@ h1,h2,h3,h4,h5,h6{
 body{
     font-size: 1em;
     line-height: 1.5;
+    background-color: #dcefec;
 }
 /* header */
+header{
+    background-color: #fff;    
+}
 .layout{
     max-width: 1840px;
     margin: 0 auto;
@@ -53,6 +57,10 @@ body{
 }
     #menu ul a{
         margin: 0 25px;
+        padding: 8px 0;
+    }
+    #menu ul a:hover{
+        border-bottom: 2px solid #424242;
     }
 
 /* main */
@@ -86,25 +94,151 @@ main{
     
 }
 /* 신제품 */
-.new-item{
+.new-item, .notice, .movie, .line{
     max-width: 100%;
     text-align: center;
+    margin-bottom: 30px;
 }
+.new-item{position: relative;}
 .new-item img{
     width: 70%;
 }
+#yujasun{
+    position: absolute;
+    top: 88%;
+    left: 48.5%;
+    height: 40px;
+    background: #e0e3cd;
+    color: black;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+    border-radius: 100px;
+    transition: all .2s;
+    padding: 0 20px;
+}
+#yujasun:hover{
+    background: #424242;
+    color: #e0e3cd;
+}
 /* 새소식 */
-.notice, .movie, .line{
-    max-width: 100%;
-    text-align: center;
+.notice img{
+    width: 90%;
 }
 
 /* 한율영상 */
-
+.movie{
+    margin: 200px 0 ;
+}
+.movie iframe{
+    width: 50%;
+    height: 630px;
+}
 
 /* 한율 라인 */
-.line_Wrap{
+.line{
+    margin: 0;
+    padding: 100px 0 200px;
+    background: url(contents/water-line.jpg);
+    background-size: cover;
+}
+.line h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 50px 0 30px;
+}
+.line_wrap{
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(4,1fr);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(5, 250px);
+    grid-template-rows: repeat(3,250px);
+    grid-gap: 30px;
+}
+.line_wrap a{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.line_wrap img{
+    width: 100%;
+    position: relative;
+    filter: saturate(110%);
+}
+.line_wrap a span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.info-title{
+    font-size: 28px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #424242;
+}
+.info-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(98, 98, 98, 0.3);
+}
+    .info-background:hover{
+        background: transparent;
+    }
+/* line info-tag */
+.info-tag{
+    font-size: 18px;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 25px;
+    text-align: center;
+    font-weight: 600; 
+}
+.pureartemisi .info-tag{
+    background-color: #325636;
+}
+.artemisial .info-tag{
+    background-color: #000000;
+}
+.redrice .info-tag{
+    background-color: #cd8a91;
+}
+
+
+/* footer */
+footer{
+    text-align: center;
+}
+#footer-wrap{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #424242;
+    color: #ccc;
+    line-height: 1.3;
+}
+#footer-wrap .layout{
+    max-width: 1300px;
+    height: 55px;
+    padding-top: 5px;
+    display: block;
+    position: relative;
+}
+
+.bar{   
+    display: inline;
+    zoom: 1;
+    margin: 0 2.5%;
+    border-left: 1px solid #585858;
+    height: 100%;
+    vertical-align: top;
 }

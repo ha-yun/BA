@@ -24,6 +24,7 @@ $(function(){
     function MainBanner(){
         currentIndex++;
         if(currentIndex >= main_size){
+            MoveBanner(currentIndex);
             currentIndex = 0
             main_slide.fadeOut(0)
             main_slide.css({'transform':'translateX('+ -currentX+'px)'});
