@@ -4,7 +4,7 @@
 *{
     font-family: 'AritaDotum'
 }
-body,div,span,a,section,ul,ol,li,dl,dt,dd{
+body,div,span,a,p,section,ul,ol,li,dl,dt,dd,button{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,7 +20,9 @@ h1,h2,h3,h4,h5,h6{
 body{
     font-size: 1em;
     line-height: 1.5;
-    background-color: #dcefec;
+    /* background-color: #dcefec; */
+    background: url(contents/Artboard\ 1.png) no-repeat;
+    background-size: cover;
 }
 /* header */
 header{
@@ -94,19 +96,25 @@ main{
     
 }
 /* 신제품 */
-.new-item, .notice, .movie, .line{
+.new-item, .notice, .social, .movie, .line{
     max-width: 100%;
     text-align: center;
     margin-bottom: 30px;
 }
-.new-item{position: relative;}
-.new-item img{
-    width: 70%;
+.new-item-wrap{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.new-item1, .new-item2{
+    position: relative;
+    width: 50%;
 }
 #yujasun{
     position: absolute;
     top: 88%;
-    left: 48.5%;
+    left: 47%;
     height: 40px;
     background: #e0e3cd;
     color: black;
@@ -121,25 +129,139 @@ main{
     background: #424242;
     color: #e0e3cd;
 }
+#pinkplumtoner{
+    position: absolute;
+    top: 88%;
+    left: 47%;
+    height: 40px;
+    background: #e0e3cd;
+    color: black;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+    border-radius: 100px;
+    transition: all .2s;
+    padding: 0 20px;
+}
+#pinkplumtoner:hover{
+    background: #424242;
+    color: #e0e3cd;
+}
 /* 새소식 */
 .notice img{
     width: 90%;
 }
 
+/* 소셜 인스타 */
+.social{
+    overflow: hidden;
+}
+.social-gallery{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    transform: translate(10%);
+    animation: insta-gallery linear 20s infinite ;
+}
+@keyframes insta-gallery {
+    50%{
+        transform: translate(-50%);
+    }
+}
+.social-gallery div{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+.social-gallery div img{
+    width: 300px;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.social-gallery div span{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    opacity: 0;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.social-gallery div:hover span{
+    bottom: 0;
+    opacity: 1;
+}
+
+
 /* 한율영상 */
 .movie{
-    margin: 200px 0 ;
+    margin: 100px 0 100px ;
 }
-.movie iframe{
-    width: 50%;
+.movie-wrap p{
+    margin-bottom: 30px;
+}
+.movie-list{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    min-width: 1600px;
+}
+#movie-active{
+    display: inline-block;
+    width: 100%;
+    height: 630px;
+    margin: 0 25px;
+    width: 70%;
+}
+.movie-bar{
+    display: inline-block;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 30%;
     height: 630px;
 }
+::-webkit-scrollbar{
+    width: 10px;
+}
+ ::-webkit-scrollbar-thumb{
+        background-color: rgba(118, 139, 197, 0.7);
+        border-radius: 5px;
+    }
+ ::-webkit-scrollbar-track{
+        background-color: rgba(142, 146, 181, 0.8);
+    }
+.movie-bar button{
+    display: block;
+    width: 100%;
+    background: transparent;
+    margin-bottom: 15px;
+    border:none;
+    cursor: pointer;
+}
+.movie-bar button:hover{
+    border: 1px solid rgba(66, 66, 66, 0.6);
+}
+.movie-bar button iframe{
+    display: none;
+}
+.movie-bar span{
+    display: block;
+}
+
 
 /* 한율 라인 */
 .line{
     margin: 0;
-    padding: 100px 0 200px;
-    background: url(contents/water-line.jpg);
+    padding: 200px 0 200px;
+    background: url(contents/water-line.png);
     background-size: cover;
 }
 .line h2{
@@ -161,11 +283,20 @@ main{
     width: 100%;
     height: 100%;
     position: relative;
+    box-shadow: 0px 4px 5px 0px #424242;
+    overflow: hidden;
+}
+.line_wrap a:hover{
+    box-shadow: 0px 1px 1px 0px #424242;
+}
+.line_wrap a:hover img{
+    transform: scale(1.05);
 }
 .line_wrap img{
     width: 100%;
     position: relative;
     filter: saturate(110%);
+    transition: 0.3s;
 }
 .line_wrap a span{
     width: 100%;
@@ -180,9 +311,14 @@ main{
     align-content: center;
 }
 .info-title{
-    font-size: 28px;
-    color: #fff;
-    text-shadow: 1px 1px 2px #424242;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    width: 70%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: 300;
+    
 }
 .info-background{
     width: 100%;
@@ -190,10 +326,11 @@ main{
     position: absolute;
     top: 0%;
     left: 0%;
-    background-color: rgba(98, 98, 98, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all .5s;
 }
     .info-background:hover{
-        background: transparent;
+        background-color: rgba(0, 0, 0, 0.1);
     }
 /* line info-tag */
 .info-tag{
@@ -201,8 +338,11 @@ main{
     color: #fff;
     display: inline-block;
     padding: 2px 25px;
+    width: 100%;
     text-align: center;
     font-weight: 600; 
+    z-index: 100;
+
 }
 .pureartemisi .info-tag{
     background-color: #325636;
@@ -213,7 +353,39 @@ main{
 .redrice .info-tag{
     background-color: #cd8a91;
 }
-
+.yuja .info-tag{
+    background-color: #d9c265;
+}
+.pinkplum .info-tag{
+    background-color: #d5935f;
+}
+.mentha .info-tag{
+    background-color: #8eb4b5;
+}
+.whitechrysanthemum .info-tag{
+    background-color: #c4c4c4;
+}
+.likenature .info-tag{
+    background-color: #b1b68e;
+}
+.powerfulbeen .info-tag{
+    background-color: #9b72af;
+}
+.brownleaf .info-tag{
+    background-color: #938060;
+}
+.ginseng .info-tag{
+    background-color: #c5a376;
+}
+.baekhwagoh .info-tag{
+    background-color: #cbbeab;
+}
+.seoritae .info-tag{
+    background-color: #7a7a7a;
+}
+.songdang .info-tag{
+    background-color: #000000;
+}
 
 /* footer */
 footer{
@@ -233,6 +405,12 @@ footer{
     display: block;
     position: relative;
 }
+.go-to-mall, .go-beauty-point, .go-sns{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+
+}
 
 .bar{   
     display: inline;
@@ -241,4 +419,55 @@ footer{
     border-left: 1px solid #585858;
     height: 100%;
     vertical-align: top;
+}
+
+.brand-logo{
+    position: relative;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 150px;
+}
+#appmall_logo{
+    position: absolute;
+    top: 13px;
+    left: 65px;
+    height: 15px;
+}
+.brand-logo p{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1em 1em 1em 0;
+}
+.footer_span{
+    display: block;
+}
+.btn{
+    border: 1px solid #999;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 1em;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    padding: 0.7em 2em;
+    transition: 0.3s;
+}
+.btn span{
+    color: #fff;
+    font-size: 1em;
+}
+.btn:hover{
+    background-color: #999;
+}
+
+
+#footer-linkedarea{
+    padding-bottom: 20px;
+    background: #fff;
+    line-height: 1.3;
+}
+#footer-linkedarea .layout{
+    height: 95px;
+    border-top: 1px solid #f0f0f0;
+    overflow: hidden;
+    padding-top: 20px;
 }

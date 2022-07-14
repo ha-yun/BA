@@ -19,7 +19,10 @@ $(function(){
         currentIndex = index;
         currentX = main_width*currentIndex;
         main_slide.css({'transform':'translateX('+ -currentX+'px)'});
-        main_slide.fadeIn();
+        if(main_slide.css('display') === 'none'){
+            main_slide.stop().fadeIn();
+        }
+        
     }
     function MainBanner(){
         currentIndex++;
@@ -36,8 +39,6 @@ $(function(){
         timer = setInterval(MainBanner, 5000)
     }
     MainBannerSlide();
-
-
 
     function Event(){
     }
