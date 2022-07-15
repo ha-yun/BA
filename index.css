@@ -1,6 +1,10 @@
 @import url('https://webfontworld.github.io/amore/AritaBuri.css'); /* font-family: 'AritaBuri'; */
 @import url('https://webfontworld.github.io/amore/AritaDotum.css'); /* font-family: 'AritaDotum' */
 
+/* responsive */
+@import url(responsive.css);
+
+
 *{
     font-family: 'AritaDotum'
 }
@@ -18,7 +22,7 @@ h1,h2,h3,h4,h5,h6{
     padding: 0;
 }
 body{
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 1.5;
     /* background-color: #dcefec; */
     background: url(contents/Artboard\ 1.png) no-repeat;
@@ -95,7 +99,7 @@ main h2{
 .main-slide{
     display: flex;
     width: 500vw;
-    height: 1000px;
+    height: 750px;
     overflow: hidden;
     transition: 1s;
 }
@@ -105,15 +109,15 @@ main h2{
 .main-banner img{
     display: inline-block;
     width: 100vw;
-    height: 1000px;
+    height: 750px;
     object-fit: cover;
-    object-position: center 18%;
+    object-position: center 29%;
 }
 .main-slide-wrap a{
     position: absolute;
     z-index: 50;
     font-size: 18px;
-    padding: 1em 4.2em !important;
+    padding: 1em 4.2em;
 }
 .main-slide-wrap a:hover{
     color:#fff;
@@ -131,7 +135,7 @@ main h2{
     left: 43%;
 }
 .redricebanner{
-    top: 55%;
+    top: 60%;
     left: 45%;
 }
 
@@ -193,6 +197,7 @@ main h2{
 }
 .notice-wrap{
     margin-top:30px;
+    max-width: 100%;
     position: relative;
 }
 .notice_box{
@@ -201,13 +206,22 @@ main h2{
     width: 30%;
     overflow: hidden;
 }
+.notice_box div{
+    display: inline-block;
+    width: 100%;
+    height: 650px;
+}
+.notice_box div img{
+    max-width: 100%;
+}
 .notice_box img{
     display: inline-block;
     width: 100%;
-    height: 873px;
+    height: 650px;
     object-fit: cover;
     object-position: center;
     transition: all 0.4s;
+    cursor: pointer;
 }
 .remove_transition{
     transition: 0s !important ;
@@ -216,8 +230,8 @@ main h2{
     overflow: hidden;
     position: absolute;
     top: 45%;
-    width: 70px;
-    height: 130px;
+    width: 50px;
+    height: 100px;
     padding: 0;
     background-color: rgba(153, 153, 153, 0.5);
     opacity: 0.5;
@@ -300,12 +314,11 @@ main h2{
     align-items: center;
     justify-content: center;
     align-content: center;
-    min-width: 1600px;
+    min-width: 100%;
     margin-top: 30px;
 }
 #movie-active{
     display: inline-block;
-    width: 100%;
     height: 630px;
     margin: 0 25px;
     width: 70%;
@@ -314,7 +327,7 @@ main h2{
     display: inline-block;
     overflow: scroll;
     overflow-x: hidden;
-    width: 30%;
+    width: 23%;
     height: 630px;
 }
 ::-webkit-scrollbar{
@@ -343,26 +356,28 @@ main h2{
 }
 .movie-bar span{
     display: block;
+    font-size: 1.1em;
 }
 
 
 /* 한율 라인 */
 .line{
     margin: 0;
-    padding: 200px 0 200px;
+    padding: 200px 0;
     background: url(contents/water-line.png);
     background-size: cover;
 }
 .line_wrap{
     margin: 0 auto;
     margin-top: 40px;
+    width: 100%;
     display: grid;
     align-items: center;
     justify-items: center;
     justify-content: center;
-    grid-template-columns: repeat(5, 250px);
-    grid-template-rows: repeat(3,250px);
-    grid-gap: 30px;
+    grid-template-columns: repeat(5, 15%);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 30px 2%;
 }
 .line_wrap a{
     width: 100%;
@@ -607,5 +622,3 @@ footer .copyright{
     margin: 0;
     padding: 0.5em 0 2em;
 }
-
-

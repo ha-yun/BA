@@ -1,0 +1,281 @@
+@media all and (min-width:1921px){
+    .main-slide{
+        height:1000px !important;
+    }
+    .main-banner img{
+        height: 1000px !important;
+        object-position: center 30% !important;
+    }
+    .notice_box div{
+        height: 860px !important;
+    }
+    .notice_box img{
+        height: 860px !important;
+    }
+    .notice-wrap button{
+        width:70px !important;
+        height:120px !important;
+    }
+}
+@media all and (max-width:1023px){
+    body{
+        font-size: 1em !important;
+    }
+    .main-slide-wrap a{
+        padding: 1em 3em !important;
+    }
+    .about_brand{
+        top: 40% !important;
+        left: 48% !important;
+    }
+    .young-artemisia{
+        top: 40% !important;
+        left: 37%;
+    }
+    .yujabanner{
+        top: 47%;
+        left: 36% !important;
+    }
+    .redricebanner{
+        top: 50% !important;
+        left: 45%;
+    }
+    .new-item-wrap{
+        flex-direction: column !important;
+    }
+    .new-item1,.new-item2{
+        width:100% !important;
+    }
+    .notice_box{
+        width: 38% !important;
+    }
+    #notice_prev{
+        left: 2.3% !important;
+    }
+    #notice_next{
+        right: 2.3% !important;
+    }
+    .notice_box div{
+        height: 550px !important;
+    }
+    .notice_box img{
+        height: 550px !important;
+    }
+    .notice-wrap button{
+        width:45px !important;
+        height:90px !important;
+    }
+    .social-gallery div span{
+        font-size:0.8em
+    }
+    .line{
+        padding: 150px 0 !important;
+    }
+    .line_wrap{
+        grid-template-columns: repeat(4, 20%) !important;
+        grid-template-rows: repeat(4,1fr) !important;
+    }
+    #footer-wrap .layout{
+        height: 120px !important;
+    }
+    .bar{
+        height: 40% !important;
+    }
+}
+@media all and (max-width:767px){
+    #hanyul-logo-img{
+        width: 90%;
+    }
+    #menu{
+        height: 40px !important
+    }
+    #menu ul{
+        font-size: 18px !important;
+    }
+    body{
+        font-size: 0.9em !important;
+    }
+    .main-slide{
+        height: 400px !important;
+    }
+    .main-banner img{
+        height: 400px !important
+    }
+    .main-slide-wrap a{
+        font-size: 0.5em !important;
+        padding: 0.7em 2em !important
+    }
+    .redricebanner{
+        left: 40% !important;
+    }
+    #yujasun{
+        left: 42% !important;
+        top: 87% !important;
+        height: 25px !important;
+        font-size: 10px !important;
+        line-height: 25px !important;
+    }
+    #pinkplumtoner{
+        left: 42% !important;
+        top: 87% !important;
+        height: 25px !important;
+        font-size: 10px !important;
+        line-height: 25px !important;
+    }
+    #last_noticebox{
+        display: none;
+    }
+    .notice_box{
+        width: 73% !important;
+    }
+    .notice-wrap button{
+        width: 40px !important;
+        height: 80px !important;
+    }
+    .social-gallery{
+        animation: insta-gallery2 linear 20s infinite !important;
+        transform: translateX(10%) !important;
+    }
+    @keyframes insta-gallery2 {
+        50%{
+            transform: translateX(-350%);
+        }
+    }
+    .social-gallery div{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .social-gallery div img{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    .movie-list{
+        flex-direction: column;
+        max-width: 100%;
+    }
+    #movie-active{
+        width: 90% !important;
+        height: 350px !important;
+    }
+    .movie-bar{
+        display: flex !important;
+        align-items: center;
+        align-content: center;
+        overflow-x: scroll !important;
+        overflow-y: hidden !important;
+        width: 90% !important;
+        height: 200px !important;
+    }
+    .movie-bar button{
+        display: inline-block !important;
+        min-width: 150px !important;
+        min-height: 200px !important;
+    }
+    .movie-bar button img{
+        width: 100%;
+        height: 100px;
+    }
+    .line{
+        padding: 100px 0 !important
+    }
+
+    /* footer  */
+    #footer-wrap .layout{
+        height: 120px !important;
+    }
+    .bar{
+        height: 0% !important;
+    }
+    .brand-logo{
+        font-size: 10px !important;
+        padding-left: 70px !important;
+    }
+    .brand-logo p{
+        margin: 0.5em 0.5em 0.5em 0 !important;
+    }
+    .btn{
+        display: block;
+        font-size: 0.8em !important;
+        padding: 0.7em 1em !important;
+    }
+    .sns-inner{
+        font-size: 10px !important;
+    }
+    #beauty-point-logo{
+        left: -10px !important;
+        height: 18px !important;;
+    }
+    #appmall_logo{
+        left: 8px !important;
+        height: 10px !important
+    }
+    .line_wrap{
+        grid-template-columns: repeat(3, 28%) !important;
+        grid-template-rows: repeat(5, 1fr) !important;
+    }
+    .info-title{
+        font-size: 14px !important;
+    }
+    .info-tag{
+        font-size: 14px !important;
+    }
+}
+@media all and (max-width:479px){
+    #hanyul-logo-img{
+        width: 80%;
+    }
+    #menu{
+        height: 40px !important
+    }
+    #menu ul{
+        font-size: 14px !important;
+    }
+    #menu ul a{
+        margin: 0 15px !important
+    }
+    #yujasun{
+        left: 39% !important;
+        top: 86% !important;
+        height: 18px !important;
+        font-size: 9px !important;
+        line-height: 18px !important;
+    }
+    #pinkplumtoner{
+        left: 39% !important;
+        top: 86% !important;
+        height: 18px !important;
+        font-size: 9px !important;
+        line-height: 18px !important;
+    }
+    .notice-wrap button{
+        width: 28px !important;
+        height: 70px !important
+    }
+    .notice_box{
+        margin: 0 !important;
+        width: 100% !important
+    }
+    .notice_box img{
+        height: 450px !important;
+    }
+    #notice_next{
+        right: 0% !important;
+    }
+    #notice_prev{
+        left: 0% !important;
+    }
+    .social-gallery div{
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .social-gallery div img{
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .info-title{
+        font-size: 12px !important;
+    }
+    .info-tag{
+        font-size: 12px !important;
+    }
+}
