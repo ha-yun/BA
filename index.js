@@ -1,4 +1,6 @@
 $(function(){
+    var header_logo;
+
     var currentIndex = 0;
     var currentX = 0;
     var main_slide;
@@ -6,19 +8,29 @@ $(function(){
     var main_size;
 
     Init();
+    scrollHeader();
     Event();
 
     function Init(){
+        header_logo = $(".logo");
         main_slide = $(".main-slide");
-        main_size = $(".main-slide").children('img').size();
+        main_size = $(".main-slide").children('.main-slide-wrap').size();
+    }
+    
+    function scrollHeader(){
+        if($(window).scrollTop()>0){
+            header_logo.addClass('scroll_logo');
+        }else{
+            header_logo.removeClass('scroll_logo');
+        }
     }
 
     function MoveBanner(index){
-        main_width = main_slide.children('img').width();
+        main_width = main_slide.children('.main-slide-wrap').width();
 
         currentIndex = index;
         currentX = main_width*currentIndex;
-        main_slide.css({'transform':'translateX('+ -currentX+'px)'});
+        main_slide.stop().css({'transform':'translateX('+ -currentX+'px)'});
         if(main_slide.css('display') === 'none'){
             main_slide.stop().fadeIn();
         }
@@ -41,6 +53,7 @@ $(function(){
     MainBannerSlide();
 
     function Event(){
+        $(window).on('scroll',scrollHeader);
     }
 
 

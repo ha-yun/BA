@@ -23,10 +23,14 @@ body{
     /* background-color: #dcefec; */
     background: url(contents/Artboard\ 1.png) no-repeat;
     background-size: cover;
+    height: auto;
 }
 /* header */
 header{
-    background-color: #fff;    
+    background-color: #fff;
+    position: sticky;
+    top:0 ;
+    z-index: 1000;
 }
 .layout{
     max-width: 1840px;
@@ -38,13 +42,16 @@ header{
     padding: 13px 0 17px;
     text-align: center;
     border-bottom: 1px solid #f0f0f0;
+    transition: 0.2s;
 }
     .logo a{
         display: block;
         width: 190px;
         margin: 0 auto;
     }
-
+.scroll_logo{
+    padding: 5px 0 5px;
+}
 #menu{
     height: 50px;
     text-align: center;
@@ -87,19 +94,47 @@ main{
     overflow: hidden;
     transition: 1s;
 }
+.main-slide-wrap{
+    position: relative;
+}
 .main-banner img{
     display: inline-block;
     width: 100vw;
     height: 1000px;
     object-fit: cover;
     object-position: center 18%;
-    
 }
+.main-slide-wrap a{
+    position: absolute;
+    z-index: 50;
+    font-size: 18px;
+    padding: 1em 4.2em !important;
+}
+.main-slide-wrap a:hover{
+    color:#fff;
+}
+.about_brand{
+    top: 47%;
+    left: 50%;
+}
+.young-artemisia{
+    top: 43%;
+    left: 40%;
+}
+.yujabanner{
+    top: 47%;
+    left: 43%;
+}
+.redricebanner{
+    top: 55%;
+    left: 45%;
+}
+
 /* 신제품 */
 .new-item, .notice, .social, .movie, .line{
     max-width: 100%;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
 }
 .new-item-wrap{
     display: flex;
@@ -148,8 +183,12 @@ main{
     color: #e0e3cd;
 }
 /* 새소식 */
+.notice{
+    margin-bottom: 150px;
+}
 .notice img{
-    width: 90%;
+    margin: 0 30px;
+    width: 30%;
 }
 
 /* 소셜 인스타 */
@@ -409,11 +448,9 @@ footer{
     display: inline-block;
     vertical-align: top;
     position: relative;
-
 }
-
 .bar{   
-    display: inline;
+    display: inline-block;
     zoom: 1;
     margin: 0 2.5%;
     border-left: 1px solid #585858;
@@ -425,13 +462,19 @@ footer{
     position: relative;
     font-size: 12px;
     text-align: left;
-    padding-left: 150px;
+    padding-left: 130px;
 }
 #appmall_logo{
     position: absolute;
     top: 13px;
-    left: 65px;
+    left: 48px;
     height: 15px;
+}
+#beauty-point-logo{
+    position: absolute;
+    top: 13px;
+    left: 40px;
+    height: 20px;
 }
 .brand-logo p{
     display: inline-block;
@@ -458,8 +501,31 @@ footer{
 .btn:hover{
     background-color: #999;
 }
-
-
+.sns-inner{
+    padding-right:80px;
+    font-size: 14px;
+    color: #fff;
+    margin: 1em 1em 1em 0;
+}
+.sns-logo{
+    position: absolute;
+    top: 13px;
+    right: 0;
+}
+.sns-logo a{
+    display: inline-block;
+    margin-left: 4px;
+    color: #585858;
+    transition: 0.3s;
+}
+.sns-logo a:hover{
+    transform: scale(1.04);
+}
+.sns-logo a img{
+    border: 0;
+    vertical-align: top;
+    max-width: 22px;
+}
 #footer-linkedarea{
     padding-bottom: 20px;
     background: #fff;
@@ -468,6 +534,27 @@ footer{
 #footer-linkedarea .layout{
     height: 95px;
     border-top: 1px solid #f0f0f0;
-    overflow: hidden;
     padding-top: 20px;
+}
+
+.footer-li{
+    display: inline-block;
+    margin: 0 10px;
+    padding-left: 21px;
+    height: 1em;
+
+}
+.footer-li a{
+    margin-top: 3px;
+    color: #585858;
+    font-size: 0.8em;
+}
+.wa-link{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+footer .copyright{
+    margin: 0;
+    padding: 0.5em 0 2em;
 }
