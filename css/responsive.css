@@ -270,10 +270,10 @@
         margin: 0 15px !important
     }
     .main-slide{
-        height: 320px !important;
+        height: 300px !important;
     }
     .main-banner img{
-        height: 320px !important
+        height: 300px !important
     }
     #yujasun{
         top: 86% !important;
@@ -316,10 +316,15 @@
         width: 200px !important;
         height: 200px !important;
     }
+    .social-gallery div span {
+        height: 35% !important;}
     .info-title{
         font-size: 12px !important;
     }
     .info-tag{
         font-size: 12px !important;
+    }
+    #footer-wrap .layout{
+        height: 180px !important;
     }
 }
