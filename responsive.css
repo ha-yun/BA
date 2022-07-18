@@ -17,11 +17,20 @@
         height:120px !important;
     }
 }
+
 @media all and (max-width:1023px){
     body{
         font-size: 1em !important;
+        
+    }
+    .main-slide{
+        height: 550px !important;
+    }
+    .main-banner img{
+        height: 550px !important
     }
     .main-slide-wrap a{
+        font-size: 14px !important;
         padding: 1em 3em !important;
     }
     .about_brand{
@@ -40,6 +49,19 @@
         top: 50% !important;
         left: 45%;
     }
+
+    #yujasun{
+        left: 44% !important;
+        height: 33px !important;
+        font-size: 13px !important;
+        line-height: 33px !important;
+    }
+    #pinkplumtoner{
+        left: 44% !important;
+        height: 33px !important;
+        font-size: 13px !important;
+        line-height: 33px !important;
+    }  
     .new-item-wrap{
         flex-direction: column !important;
     }
@@ -62,10 +84,11 @@
         height: 550px !important;
     }
     .notice-wrap button{
-        width:45px !important;
+        width: 37px !important;
         height:90px !important;
     }
     .social-gallery div span{
+        height: 30% !important;
         font-size:0.8em
     }
     .line{
@@ -82,6 +105,7 @@
         height: 40% !important;
     }
 }
+
 @media all and (max-width:767px){
     #hanyul-logo-img{
         width: 90%;
@@ -94,6 +118,9 @@
     }
     body{
         font-size: 0.9em !important;
+    }
+    main h2{
+        font-size: 1.5em !important;
     }
     .main-slide{
         height: 400px !important;
@@ -133,7 +160,7 @@
         height: 80px !important;
     }
     .social-gallery{
-        animation: insta-gallery2 linear 20s infinite !important;
+        animation: insta-gallery2 linear 30s infinite !important;
         transform: translateX(10%) !important;
     }
     @keyframes insta-gallery2 {
@@ -142,12 +169,17 @@
         }
     }
     .social-gallery div{
-        width: 250px !important;
-        height: 250px !important;
+        width: 230px !important;
+        height: 230px !important;
+    }
+    .social-gallery div span{
+        height: 31% !important;
+        bottom: 0% !important;
+        opacity: 1 !important;
     }
     .social-gallery div img{
-        width: 250px !important;
-        height: 250px !important;
+        width: 230px !important;
+        height: 230px !important;
     }
     .movie-list{
         flex-direction: column;
@@ -220,6 +252,7 @@
         font-size: 14px !important;
     }
 }
+
 @media all and (max-width:479px){
     #hanyul-logo-img{
         width: 80%;
@@ -232,6 +265,12 @@
     }
     #menu ul a{
         margin: 0 15px !important
+    }
+    .main-slide{
+        height: 320px !important;
+    }
+    .main-banner img{
+        height: 320px !important
     }
     #yujasun{
         left: 39% !important;
