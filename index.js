@@ -109,11 +109,7 @@ $(function(){
     // responsive
     $(window).resize(function(){
         MoveBanner(currentIndex);
-        var width = $(window).width();
-        if (width<1024){
-        }
-        else{
-        }
+        MoveNotice(currentNotice);
     })
     $(window).trigger("resize");
 

@@ -19,6 +19,9 @@
 }
 
 @media all and (max-width:1023px){
+    #menu ul{
+        font-size: 18px !important;
+    }
     body{
         font-size: 1em !important;
         
@@ -43,13 +46,12 @@
     }
     .yujabanner{
         top: 47%;
-        left: 36% !important;
+        left: 39% !important;
     }
     .redricebanner{
         top: 50% !important;
         left: 45%;
     }
-
     #yujasun{
         left: 44% !important;
         height: 33px !important;
@@ -69,19 +71,19 @@
         width:100% !important;
     }
     .notice_box{
-        width: 38% !important;
+        width: 36.5% !important;
     }
     #notice_prev{
-        left: 2.3% !important;
+        left: 3% !important;
     }
     #notice_next{
-        right: 2.3% !important;
+        right: 3% !important;
     }
     .notice_box div{
-        height: 550px !important;
+        height: 500px !important;
     }
     .notice_box img{
-        height: 550px !important;
+        height: 500px !important;
     }
     .notice-wrap button{
         width: 37px !important;
@@ -136,14 +138,12 @@
         left: 40% !important;
     }
     #yujasun{
-        left: 42% !important;
         top: 87% !important;
         height: 25px !important;
         font-size: 10px !important;
         line-height: 25px !important;
     }
     #pinkplumtoner{
-        left: 42% !important;
         top: 87% !important;
         height: 25px !important;
         font-size: 10px !important;
@@ -153,7 +153,10 @@
         display: none;
     }
     .notice_box{
-        width: 73% !important;
+        width: 70% !important;
+    }
+    .notice_box img{
+        height: 550px !important;
     }
     .notice-wrap button{
         width: 40px !important;
@@ -273,18 +276,20 @@
         height: 320px !important
     }
     #yujasun{
-        left: 39% !important;
         top: 86% !important;
+        left: 43% !important;
         height: 18px !important;
         font-size: 9px !important;
         line-height: 18px !important;
+        padding: 0 10px !important;
     }
     #pinkplumtoner{
-        left: 39% !important;
         top: 86% !important;
+        left: 43% !important;
         height: 18px !important;
         font-size: 9px !important;
         line-height: 18px !important;
+        padding: 0 10px !important;
     }
     .notice-wrap button{
         width: 28px !important;
@@ -292,7 +297,7 @@
     }
     .notice_box{
         margin: 0 !important;
-        width: 100% !important
+        width: 80% !important
     }
     .notice_box img{
         height: 450px !important;
