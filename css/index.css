@@ -158,7 +158,8 @@ main h2{
 #yujasun{
     position: absolute;
     top: 88%;
-    left: 45%;
+    left: 50%;
+    transform: translateX(-50%);
     height: 40px;
     background: #e0e3cd;
     color: black;
@@ -176,7 +177,8 @@ main h2{
 #pinkplumtoner{
     position: absolute;
     top: 88%;
-    left: 45%;
+    left: 50%;
+    transform: translateX(-50%);
     height: 40px;
     background: #e0e3cd;
     color: black;
@@ -321,7 +323,7 @@ main h2{
     display: inline-block;
     height: 630px;
     margin: 0 25px;
-    width: 70%;
+    width: 60%;
 }
 .movie-bar{
     display: inline-block;
