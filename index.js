@@ -2,8 +2,6 @@ $(function(){
     var header_logo;
     var notice_nextbtn;
     var notice_prevbtn;
-    var currentNotice = 0;
-    var notice_size;
     var firstNoticeBox;
     var lastNoticeBox;
 
@@ -23,9 +21,6 @@ $(function(){
         main_size = $(".main-slide").children('.main-slide-wrap').size();
         notice_nextbtn = $("#notice_next");
         notice_prevbtn = $("#notice_prev");
-        notice_size = $("#first_noticebox").children('img').size();
-        firstNoticeBox = $("#first_noticebox").children('img');
-        lastNoticeBox = $("#last_noticebox").children('img');
     }
     
     // scrollheader
@@ -65,41 +60,49 @@ $(function(){
 
 
     // notice
-    function MoveNotice(index){
-        let NoticeImgwidth = firstNoticeBox.width();
-        if(index == notice_size-1){
-            firstNoticeBox.stop().css({'transform' : 'translateX('+-(NoticeImgwidth*index)+'px'});
-            lastNoticeBox.stop().css({'transform' : 'translateX('+-(NoticeImgwidth*index)+'px'});
-            setTimeout(removeTransition,500);
-        }
-        else{
-            firstNoticeBox.stop().css({'transform' : 'translateX('+-(NoticeImgwidth*index)+'px'});
-            lastNoticeBox.stop().css({'transform' : 'translateX('+-(NoticeImgwidth*index)+'px'});
-        } 
+    function MoveNotice(){
+        firstNoticeBox = $("#first_noticebox").children('img');
+        lastNoticeBox = $("#last_noticebox").children('img');
+
+        firstNoticeBox.eq(0).stop().css({'margin-left':'-100%'});
+        setTimeout(function(){
+            firstNoticeBox.eq(0).appendTo($('#first_noticebox'));
+            firstNoticeBox.css({'margin-left':'0%'});
+        },500);
+
+        lastNoticeBox.eq(0).stop().css({'margin-left':'-100%'});
+        setTimeout(function(){
+            lastNoticeBox.eq(0).appendTo($('#last_noticebox'));
+            lastNoticeBox.css({'margin-left':'0%'});
+        },500)
     }
 
-    function removeTransition(){
-        firstNoticeBox.addClass('remove_transition');
-        lastNoticeBox.addClass('remove_transition')
-        firstNoticeBox.slice(0,notice_size-1).css({'transform':'translateX('+0+'px'});
-        lastNoticeBox.slice(0,notice_size-1).css({'transform':'translateX('+0+'px'});
-    }
-    
-    function NoticeBanner(){
-        currentNotice++;
-        if(currentNotice >= notice_size){
-            currentNotice = 1;
-            firstNoticeBox.removeClass('remove_transition');
-            lastNoticeBox.removeClass('remove_transition');
-        }
-        MoveNotice(currentNotice)
-    }
+    function PrevNotice(){
+        firstNoticeBox = $("#first_noticebox").children('img');
+        lastNoticeBox = $("#last_noticebox").children('img');
 
+        firstNoticeBox.last().stop().css({'margin-left':'-100%'});
+        firstNoticeBox.last().prependTo($('#first_noticebox'));
+        setTimeout(function(){
+            firstNoticeBox.last().stop().css({'margin-left':'100%'});
+            firstNoticeBox.css({'margin-left':'0%'});
+        },50);
+
+        lastNoticeBox.last().stop().css({'margin-left':'-100%'});
+        lastNoticeBox.last().prependTo($('#last_noticebox'));
+        setTimeout(function(){
+            lastNoticeBox.last().stop().css({'margin-left':'100%'});
+            lastNoticeBox.css({'margin-left':'0%'});
+        },50);
+    } 
+
+    setInterval(MoveNotice, 4000)
 
     // event
     function Event(){
         $(window).on('scroll',scrollHeader);
-        notice_nextbtn.bind('click', NoticeBanner);
+        notice_nextbtn.bind('click', MoveNotice);
+        notice_prevbtn.bind('click',PrevNotice);
     }
 
 
@@ -109,7 +112,6 @@ $(function(){
     // responsive
     $(window).resize(function(){
         MoveBanner(currentIndex);
-        MoveNotice(currentNotice);
     })
     $(window).trigger("resize");
 
